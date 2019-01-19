@@ -1,5 +1,6 @@
 var gulp = require("gulp")
 var browserSync = require('browser-sync').create()
+var webpack = require('webpack-stream');
 
 gulp.task("html", function (done) {
 	gulp.src("src/*.html")
@@ -8,15 +9,23 @@ gulp.task("html", function (done) {
 })
 
 gulp.task("js", function (done) {
-	gulp.src("src/js/*.js")
-		.pipe(gulp.dest("dist/js/"))
+	gulp.src("src/js/*")
+		.pipe(
+			webpack({
+				output: {
+					filename: "app.js"
+				},
+				mode: "production"
+			})
+		)
+		.pipe(gulp.dest("dist/js"))
 		.pipe(browserSync.stream())
 	done()
 })
 
 gulp.task("css", function (done) {
 	gulp.src("src/css/*.css")
-		.pipe(gulp.dest("dist/css/"))
+		.pipe(gulp.dest("dist/css"))
 		.pipe(browserSync.stream())
 	done()
 })

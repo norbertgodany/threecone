@@ -10,6 +10,18 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/norbertgodany/threecone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/norbertgodany/threecone/issues"
+  },
+  "homepage": "https://github.com/norbertgodany/threecone#readme",
+  "dependencies": {
+    "three": "^0.100.0"
   }
 }

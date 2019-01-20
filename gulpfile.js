@@ -15,7 +15,8 @@ gulp.task("js", function (done) {
 				output: {
 					filename: "app.js"
 				},
-				mode: "production"
+				mode: "production",
+				devtool: 'source-map'
 			})
 		)
 		.pipe(gulp.dest("dist/js"))

@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/norbertgodany/threecone#readme",
   "dependencies": {
-    "three": "^0.100.0"
+    "three": "^0.125.0"
   }
 }
